@@ -1,6 +1,7 @@
-package com.samridhi.jobsyapp.data.models.response
+package com.samridhi.jobsyapp.data.network.models.response
 
-import com.samridhi.jobsyapp.presentation.jobsection.JobInfo
+import com.samridhi.jobsyapp.presentation.jobdetail.JobDescription
+import com.samridhi.jobsyapp.presentation.job.JobInfo
 
 data class JobDetails(
     val results: List<JobInformation> = emptyList()
@@ -122,6 +123,29 @@ fun List<JobInformation>.toJobInfo(): List<JobInfo> {
             location = it.primary_details?.Place ?: "",
             salary = it.primary_details?.Salary ?: "",
             phoneData = it.whatsapp_no ?: ""
+        )
+    }
+}
+
+fun List<JobInformation>.toJobDetailDescription(): List<JobDescription> {
+    return this.map {
+        JobDescription(
+            id = it.id.toString(),
+            title = it.title ?: "",
+            companyName = it.company_name ?: "",
+            location = it.primary_details?.Place ?: "",
+            qualifications = it.primary_details?.Qualification ?: "",
+            salary = it.primary_details?.Salary.toString(),
+            experience = it.experience.toString(),
+            qualification = it.qualification.toString(),
+            feesCharged = it.fees_charged.toString(),
+            openingsCount = it.openings_count.toString(),
+            jobRole = it.job_role.toString(),
+            jobHours = it.job_hours.toString(),
+            jobCategory = it.job_category.toString(),
+            customLink = it.custom_link.toString(),
+            views = it.views.toString(),
+            shares = it.shares.toString()
         )
     }
 }

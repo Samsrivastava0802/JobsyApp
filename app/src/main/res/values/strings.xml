@@ -2,6 +2,25 @@
     <string name="app_name">JobsyApp</string>
     <string name="jobs_opening">Jobs Opening</string>
     <string name="location">Location</string>
+    <string name="Location">Location - %s</string>
     <string name="salary">Salary</string>
+    <string name="Salary">Salary - %s</string>
     <string name="phone_data">Phone Data</string>
+    <string name="job_description">Job Description</string>
+    <string name="job">Job</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="no_data_available">No data available</string>
+    <string name="experience">Experience</string>
+    <string name="qualification">Qualification</string>
+    <string name="Qualification">Qualification - %s</string>
+    <string name="feescharged">FeesCharged</string>
+    <string name="openings_count">openings count</string>
+    <string name="job_role">job role</string>
+    <string name="job_hours">job hours</string>
+    <string name="job_category">job category</string>
+    <string name="custom_link">custom link</string>
+    <string name="views">views</string>
+    <string name="shares">shares</string>
+    <string name="premiumtill">Premium Till - %s</string>
+
 </resources>
